@@ -22,7 +22,9 @@
         "libs/features/pages/contact/src/server.ts"
       ],
       "@eccomerce/home": ["libs/features/pages/home/src/index.ts"],
-      "@eccomerce/home/server": ["libs/features/pages/home/src/server.ts"]
+      "@eccomerce/home/server": ["libs/features/pages/home/src/server.ts"],
+      "@eccomerce/shop": ["libs/features/pages/shop/src/index.ts"],
+      "@eccomerce/shop/server": ["libs/features/pages/shop/src/server.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
