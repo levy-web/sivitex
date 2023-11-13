@@ -5,7 +5,7 @@ export default async function Index() {
    * Note: The corresponding styles are in the ./index.scss file.
    */
   return (
-    <div className='h-screen bg-red-400'>
+    <div className='h-screen container mx-auto p-20'>
       <h2>hello world</h2>
     </div>
   );

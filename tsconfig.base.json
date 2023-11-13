@@ -21,6 +21,8 @@
       "@eccomerce/contact/server": [
         "libs/features/pages/contact/src/server.ts"
       ],
+      "@eccomerce/header": ["libs/elements/layout/header/src/index.ts"],
+      "@eccomerce/header/server": ["libs/elements/layout/header/src/server.ts"],
       "@eccomerce/home": ["libs/features/pages/home/src/index.ts"],
       "@eccomerce/home/server": ["libs/features/pages/home/src/server.ts"],
       "@eccomerce/shop": ["libs/features/pages/shop/src/index.ts"],
