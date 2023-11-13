@@ -9,7 +9,8 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/eccomerce"
+        "outputPath": "dist/apps/eccomerce",
+        "postcssConfig": "apps/eccomerce/postcss.config.js"
       },
       "configurations": {
         "development": {

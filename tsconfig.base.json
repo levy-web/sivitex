@@ -13,8 +13,11 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {}
+    "baseUrl": "./",
+    "paths": {
+      "@eccomerce/home": ["libs/features/pages/home/src/index.ts"],
+      "@eccomerce/home/server": ["libs/features/pages/home/src/server.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
