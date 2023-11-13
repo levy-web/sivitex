@@ -1,0 +1,16 @@
+{
+  "name": "about",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/features/pages/about/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/features/pages/about/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}
