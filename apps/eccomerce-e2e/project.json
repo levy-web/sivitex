@@ -1,0 +1,29 @@
+{
+  "name": "eccomerce-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/eccomerce-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/eccomerce-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "eccomerce:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "eccomerce:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/eccomerce-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["eccomerce"]
+}
