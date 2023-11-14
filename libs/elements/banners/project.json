@@ -1,0 +1,16 @@
+{
+  "name": "hero-banner",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/elements/banners/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/elements/banners/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}
