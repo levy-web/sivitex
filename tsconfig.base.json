@@ -38,7 +38,9 @@
       "@eccomerce/home": ["libs/features/pages/home/src/index.ts"],
       "@eccomerce/home/server": ["libs/features/pages/home/src/server.ts"],
       "@eccomerce/shop": ["libs/features/pages/shop/src/index.ts"],
-      "@eccomerce/shop/server": ["libs/features/pages/shop/src/server.ts"]
+      "@eccomerce/shop/server": ["libs/features/pages/shop/src/server.ts"],
+      "@eccomerce/texts": ["libs/elements/layout/texts/src/index.ts"],
+      "@eccomerce/texts/server": ["libs/elements/layout/texts/src/server.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
