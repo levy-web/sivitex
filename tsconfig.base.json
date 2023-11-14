@@ -17,6 +17,10 @@
     "paths": {
       "@eccomerce/about": ["libs/features/pages/about/src/index.ts"],
       "@eccomerce/about/server": ["libs/features/pages/about/src/server.ts"],
+      "@eccomerce/buttons": ["libs/elements/layout/buttons/src/index.ts"],
+      "@eccomerce/buttons/server": [
+        "libs/elements/layout/buttons/src/server.ts"
+      ],
       "@eccomerce/contact": ["libs/features/pages/contact/src/index.ts"],
       "@eccomerce/contact/server": [
         "libs/features/pages/contact/src/server.ts"
