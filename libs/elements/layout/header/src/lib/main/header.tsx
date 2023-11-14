@@ -32,9 +32,9 @@ export const Header = () => {
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
                 </svg>
             </button>
-            <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <Link href="/" className="flex me-auto items-center space-x-3 rtl:space-x-reverse">
+                <img src="sivitex.png" className="h-20 hidden md:block" alt="sivitex Logo" />
+                <span className="self-center text-2xl text-pink-800 font-semibold whitespace-nowrap dark:text-white">Sivitex</span>
             </Link>
             <div className='flex md:hidden'>
                 <img className='h-6 w-6 cursor-pointer' src='/shopping-cart.png' alt=''/>
@@ -43,16 +43,16 @@ export const Header = () => {
             <div className={`mx-auto w-full md:block md:w-auto ${menuOpen ? 'text-center' : 'hidden'}`} id="navbar-multi-level">
                 <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-opacity-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li className='py-2 px-3'>
-                        <Link href="/home" className={`py-2 px-3 rounded ${pathname === '/home' ? 'text-white bg-gray-900' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Home</Link>
+                        <Link href="/home" className={`py-2 px-3 rounded ${pathname === '/home' ? 'text-white bg-gray-900' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-800 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Home</Link>
                     </li>
                     <li className='py-2 px-3'>
-                        <Link href="/shop" className={`py-2 px-3 rounded ${pathname === '/shop' ? 'text-white bg-gray-900' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Shop</Link>
+                        <Link href="/shop" className={`py-2 px-3 rounded ${pathname === '/shop' ? 'text-white bg-gray-900' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-800 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Shop</Link>
                     </li>
                     <li onClick={toggleMenu} className='py-2 px-3'>
-                        <Link href="/categories" className={`py-2 px-3 rounded ${pathname === '/categories' ? 'text-white bg-gray-900' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Categories</Link>{menu ? <span className='' >▲</span> : <span className='' >▼</span>}
+                        <Link href="/categories" className={`py-2 px-3 rounded ${pathname === '/categories' ? 'text-white bg-gray-900' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-800 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Categories</Link>{menu ? <span className='' >▲</span> : <span className='' >▼</span>}
                     </li>
                     <li className='py-2 px-3'>
-                        <Link href="/contact" className={`py-2 px-3 rounded ${pathname === '/contact' ? 'text-white bg-gray-900' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Contact</Link>
+                        <Link href="/contact" className={`py-2 px-3 rounded ${pathname === '/contact' ? 'text-white bg-gray-900' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-800 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Contact</Link>
                     </li>
                 </ul>
             </div>
