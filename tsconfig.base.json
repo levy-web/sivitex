@@ -18,6 +18,12 @@
       "@eccomerce/about": ["libs/features/pages/about/src/index.ts"],
       "@eccomerce/about/server": ["libs/features/pages/about/src/server.ts"],
       "@eccomerce/buttons": ["libs/elements/layout/buttons/src/index.ts"],
+      "@eccomerce/buttons-interface": [
+        "libs/models/schema/ui/buttons/src/index.ts"
+      ],
+      "@eccomerce/buttons-interface/server": [
+        "libs/models/schema/ui/buttons/src/server.ts"
+      ],
       "@eccomerce/buttons/server": [
         "libs/elements/layout/buttons/src/server.ts"
       ],
