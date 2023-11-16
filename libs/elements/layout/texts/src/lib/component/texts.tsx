@@ -6,16 +6,14 @@ export const Texts: React.FC<TextsProps> = (props) => {
 
   const {
     title,
-    subtitle,
     description
 
   } = props;
 
   return (
-    <div className='bg-blue-200 w-full py-20'>
-      <h1 className='text-6xl py-8 px-4'> {title} </h1>
-      <h4 className='text-3xl py-8 px-4'> {subtitle} </h4>
-      <p className='text-2xl py-8 px-4'> {description} </p>
+    <div className='w-full content-center'>
+      <h1 className='text-6xl text-white py-8 px-4'> {title} </h1>
+      <p className='text-white md:w-1/2 py-8 px-4'> {description} </p>
     </div>
   );
 }

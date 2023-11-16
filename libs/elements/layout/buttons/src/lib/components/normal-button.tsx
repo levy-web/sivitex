@@ -12,17 +12,18 @@ export const NormalButton: React.FC<NormalButtonProps> = (props) => {
   } = props;
 
   const buttonStyle: React.CSSProperties = {
-    borderRadius: '30px'
+    borderRadius: '30px',
+    width: '200px',
+    padding: '10px',
+    margin: '10px',
   };
 
   return (
-    <div className="py-20">
-      <button
-        className={`${bgColor} ${color} ${hoverBgColor} ${hoverColor} py-4 px-12 md:px-20`}
+    <button
+        className={`${bgColor} ${color} ${hoverBgColor} ${hoverColor} py-4 px-20`}
         style={buttonStyle}
       >
-        <span>{text}</span>
-      </button>
-    </div>
+        <span className="">{text}</span>
+    </button>
   );
 }
