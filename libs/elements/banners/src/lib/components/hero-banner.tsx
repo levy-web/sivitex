@@ -17,7 +17,7 @@ export const HeroBanner = (props: HeroBannerProps) => {
     hoverColor: 'hover:text-white',
   }
   return (
-    <div className='h-screen flex items-center justify-center'>
+    <div className='bg-gray-100 h-screen flex items-center justify-center'>
         <div className='md:hidden h-screen-20 flex items-center justify-center'>
           <div className='h-full bg-gradient-to-r from-gray-800 to-transparent w-screen flex items-center justify-center'>
 

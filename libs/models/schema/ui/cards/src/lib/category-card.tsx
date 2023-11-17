@@ -1,4 +1,5 @@
 export interface CategoryCard {
   title: string,
-  imgSrc: string
+  imgSrc: string,
+  avalilableNumber:number
 }
