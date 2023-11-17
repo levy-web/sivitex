@@ -40,7 +40,7 @@ export const CategoryBanner = (props: CategoryBannerProps) => {
     <div className='bg-gray-100 flex flex-col justify-center items-center md:h-screen'>
       <div className='container mx-auto flex flex-col justify-center items-center'>
       <h1 className='text-4xl mb-12'>Categories</h1>
-      <div className='grid md:grid-cols-4 gap-4 mb-12'>
+      <div className='grid md:grid-cols-4 gap-8 p-4 md:p-2 md:gap-4 mb-12'>
         <CategoryCard {...dressCategoryCardData}/>
         <CategoryCard {...bagCategoryCardData}/>
         <CategoryCard {...glassesCategoryCardData}/>
