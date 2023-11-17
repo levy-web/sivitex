@@ -1,4 +1,4 @@
-import { HeroBanner, CategoryBanner } from '@eccomerce/hero-banner'
+import { HeroBanner, CategoryBanner, CarouselBanner } from '@eccomerce/hero-banner'
 /* eslint-disable-next-line */
 export interface HomeProps {}
 
@@ -7,6 +7,7 @@ export const Home = (props: HomeProps) => {
     <div className=''>
       <HeroBanner/>
       <CategoryBanner/>
+      <CarouselBanner/>
     </div>
   );
 }
