@@ -29,6 +29,10 @@
       ],
       "@eccomerce/card": ["libs/elements/cards/src/index.ts"],
       "@eccomerce/card/server": ["libs/elements/cards/src/server.ts"],
+      "@eccomerce/carousel": ["libs/elements/layout/carousel/src/index.ts"],
+      "@eccomerce/carousel/server": [
+        "libs/elements/layout/carousel/src/server.ts"
+      ],
       "@eccomerce/category-card": ["libs/models/schema/ui/cards/src/index.ts"],
       "@eccomerce/category-card/server": [
         "libs/models/schema/ui/cards/src/server.ts"
