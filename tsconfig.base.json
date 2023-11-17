@@ -29,6 +29,10 @@
       ],
       "@eccomerce/card": ["libs/elements/cards/src/index.ts"],
       "@eccomerce/card/server": ["libs/elements/cards/src/server.ts"],
+      "@eccomerce/category-card": ["libs/models/schema/ui/cards/src/index.ts"],
+      "@eccomerce/category-card/server": [
+        "libs/models/schema/ui/cards/src/server.ts"
+      ],
       "@eccomerce/contact": ["libs/features/pages/contact/src/index.ts"],
       "@eccomerce/contact/server": [
         "libs/features/pages/contact/src/server.ts"
