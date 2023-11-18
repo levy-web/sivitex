@@ -5,10 +5,10 @@ export interface CarouselBannerProps {}
 export const CarouselBanner = (props: CarouselBannerProps) => {
   const carouselComponentData: CarouselComponentProps = {
     images : [
-    '/model.png',
-    '/model3.png',
-    '/model2.png',
-    '/model4.png',
+    {imgSrc: '/model3.png', price: 30, name: 'product one'},
+    {imgSrc: '/model2.png', price: 300, name: 'product two'},
+    {imgSrc: '/model3.png', price: 400, name: 'product three'},
+    {imgSrc: '/model4.png', price: 678, name: 'product four'},
   ], 
   itemsPerPage:3,
   phoneItemsPerPage:1

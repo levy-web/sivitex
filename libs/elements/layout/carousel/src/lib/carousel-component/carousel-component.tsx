@@ -2,8 +2,14 @@
 
 import { useState } from "react";
 
+export interface carouselObjects {
+  imgSrc: string
+  price: number
+  name: string
+}
+
 /* eslint-disable-next-line */
-export interface CarouselComponentProps {images:string[], itemsPerPage:number, phoneItemsPerPage:number}
+export interface CarouselComponentProps {images:carouselObjects[], itemsPerPage:number, phoneItemsPerPage:number}
 
 export const CarouselComponent: React.FC<CarouselComponentProps> = (props) => {
 
@@ -50,10 +56,10 @@ export const CarouselComponent: React.FC<CarouselComponentProps> = (props) => {
             .concat(images.slice(0, phoneItemsPerPage)) // Concatenate the beginning of the array to the end
             .slice(startIndex, startIndex + phoneItemsPerPage)
             .map((image, index) => (
-              <div key={index} className="carousel-item">
-                <img src={image} alt={`Image ${startIndex + index + 1}`} />
-                <p className="text-center">Gucci</p>
-                <p className="text-center">$66</p>
+              <div key={index} className="carousel-item bg-gray-50">
+                <img src={image.imgSrc} alt={image.name} className="w-full h-96"/>
+                <p className="text-center">{image.name}</p>
+                <p className="text-center">${image.price}</p>
               </div>
           ))}
         </div>
@@ -68,15 +74,15 @@ export const CarouselComponent: React.FC<CarouselComponentProps> = (props) => {
       <div className="carousel-btn prev cursor-pointer" onClick={prevPhoneSlide}>
         &#10094;
       </div>
-      <div className="carousel-container flex flex-rol">
+      <div className="carousel-container flex flex-row">
         {images
           .concat(images.slice(0, itemsPerPage)) // Concatenate the beginning of the array to the end
           .slice(startIndex, startIndex + itemsPerPage)
           .map((image, index) => (
-            <div key={index} className="carousel-item">
-              <img src={image} alt={`Image ${startIndex + index + 1}`} />
-              <p className="text-center">Gucci</p>
-              <p className="text-center">$66</p>
+            <div key={index} className="carousel-item bg-gray-50 rounded-2xl mx-4 w-full">
+              <img src={image.imgSrc} alt={image.name} className="w-80 h-60" />
+              <p className="text-center">{image.name}</p>
+              <p className="text-center">${image.price}</p>
             </div>
         ))}
       </div>
