@@ -5,10 +5,10 @@ export const Footer = (props: FooterProps) => {
   return (
 <div className='bg-gray-300'>
       <div className='container mx-auto'>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto py-5'>
-          <div className='text-center col-lg-4 text-pink-800'>
-          <h5>CONTACT DETAILS</h5>
-            <hr className='border border-white'/>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto py-12'>
+          <div className='text-center col-lg-4'>
+          <h5 className="text-xl text-pink-800">CONTACT DETAILS</h5>
+            <hr className='text-white'/>
 
             <div className='d-flex container w-100 my-2'>
               <i className="text-primary m-auto fas fa-phone"></i>
@@ -27,9 +27,9 @@ export const Footer = (props: FooterProps) => {
                         
           </div>
 
-          <div className='text-center col-lg-4 text-pink-800'>
-          <h5>Terms</h5>
-          <hr className='border border-white'/> 
+          <div className='text-center col-lg-4'>
+          <h5 className="text-xl text-pink-800">Terms</h5>
+          <hr className='text-white'/> 
           <div className='d-flex container m-auto w-100 my-2'>
               <small className='w-100 '>Terms & Conditions</small>
             </div>
@@ -41,9 +41,9 @@ export const Footer = (props: FooterProps) => {
             </div>           
           </div>
 
-          <div className='text-center col-lg-4 text-pink-800'>
-          <h5>CUSTOMER SERVICE</h5>
-          <hr className='border border-white'/>
+          <div className='text-center col-lg-4'>
+          <h5 className="text-xl text-pink-800">CUSTOMER SERVICE</h5>
+          <hr className='text-white'/>
           <div className='d-flex container m-auto w-100 my-2'>
             <small className='w-100 '>About</small>
           </div> 
