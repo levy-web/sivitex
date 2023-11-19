@@ -41,6 +41,8 @@
       "@eccomerce/contact/server": [
         "libs/features/pages/contact/src/server.ts"
       ],
+      "@eccomerce/footer": ["libs/elements/layout/footer/src/index.ts"],
+      "@eccomerce/footer/server": ["libs/elements/layout/footer/src/server.ts"],
       "@eccomerce/header": ["libs/elements/layout/header/src/index.ts"],
       "@eccomerce/header/server": ["libs/elements/layout/header/src/server.ts"],
       "@eccomerce/hero-banner": ["libs/elements/banners/src/index.ts"],

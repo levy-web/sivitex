@@ -1,3 +1,4 @@
+import { Footer } from '@eccomerce/footer';
 import './global.css';
 import { Header } from "@eccomerce/header"
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body>
         <nav><Header/></nav>
         {children}
+        <Footer/>
       </body>
     </html>
   );
