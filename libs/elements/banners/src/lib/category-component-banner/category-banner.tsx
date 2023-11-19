@@ -1,9 +1,13 @@
+"use client"
+import { useRouter } from 'next/navigation'; 
 import { NormalButton, NormalButtonProps, } from '@eccomerce/buttons';
 import { CategoryCard, CategoryCardProps } from '@eccomerce/card'
 /* eslint-disable-next-line */
 export interface CategoryBannerProps {}
 
 export const CategoryBanner = (props: CategoryBannerProps) => {
+  const router = useRouter();
+
   const bagCategoryCardData: CategoryCardProps = {
     title:"Bags",
     imgSrc:"https://images.unsplash.com/photo-1559563458-527698bf5295?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -34,6 +38,7 @@ export const CategoryBanner = (props: CategoryBannerProps) => {
     color: 'text-white',
     hoverBgColor: 'hover:bg-gray-500',
     hoverColor: 'hover:text-white',
+    buttonClick: ()=> router.push('/shop')
   }
 
   return (

@@ -1,6 +1,6 @@
 import { ButtonData } from "@eccomerce/buttons-interface";
 
-export interface NormalButtonProps extends ButtonData {}
+export interface NormalButtonProps extends ButtonData {buttonClick:() => void}
 
 export const NormalButton: React.FC<NormalButtonProps> = (props) => {
   const {
@@ -8,7 +8,8 @@ export const NormalButton: React.FC<NormalButtonProps> = (props) => {
     bgColor,
     color,
     hoverBgColor,
-    hoverColor
+    hoverColor,
+    buttonClick
   } = props;
 
   const buttonStyle: React.CSSProperties = {
@@ -20,6 +21,7 @@ export const NormalButton: React.FC<NormalButtonProps> = (props) => {
 
   return (
     <button
+        onClick={buttonClick}
         className={`${bgColor} ${color} ${hoverBgColor} ${hoverColor} py-4 px-20`}
         style={buttonStyle}
       >
