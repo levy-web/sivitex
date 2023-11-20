@@ -52,6 +52,12 @@
       "@eccomerce/home": ["libs/features/pages/home/src/index.ts"],
       "@eccomerce/home/server": ["libs/features/pages/home/src/server.ts"],
       "@eccomerce/new-product": ["libs/functions/new/new-product/src/index.ts"],
+      "@eccomerce/new-product-form": [
+        "libs/elements/layout/form/new-product/src/index.ts"
+      ],
+      "@eccomerce/new-product-form/server": [
+        "libs/elements/layout/form/new-product/src/server.ts"
+      ],
       "@eccomerce/new-product/server": [
         "libs/functions/new/new-product/src/server.ts"
       ],

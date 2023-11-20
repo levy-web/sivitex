@@ -12,59 +12,61 @@ interface ProductDetails {
 
 const ImagePreview: React.FC<{ src: string }> = ({ src }) => (
     <img src={src} alt="Image Preview" className={`w-80 h-60 ${src ? 'block' : 'hidden'}`}  />
-  );
-  
+);
+/* eslint-disable-next-line */
+export interface NewProductFormProps {}
 
-const NewProduct: React.FC = () => {
-    const [imageSrc, setImageSrc] = useState<string | null>(null);
-    const [loading, setLoading] = useState<boolean>(false)
-    const [productDetails, setProductDetails] = useState<ProductDetails>({
-    productName: "",
-    productPrice: 0,
-    productCategory: "",
-    moreDetails: "",
-  });
+export function NewProductForm(props: NewProductFormProps) {
+
+  const [imageSrc, setImageSrc] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false)
+  const [productDetails, setProductDetails] = useState<ProductDetails>({
+  productName: "",
+  productPrice: 0,
+  productCategory: "",
+  moreDetails: "",
+});
 
 
-  const previewImage = (event: ChangeEvent<HTMLInputElement>) => {
-    const input = event.target;
+const previewImage = (event: ChangeEvent<HTMLInputElement>) => {
+  const input = event.target;
 
-    if (input.files && input.files[0]) {
-      const reader = new FileReader();
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
 
-      reader.onload = function (e) {
-        setImageSrc(e.target?.result as string);
-      };
+    reader.onload = function (e) {
+      setImageSrc(e.target?.result as string);
+    };
 
-      reader.readAsDataURL(input.files[0]);
-    }
-  };
+    reader.readAsDataURL(input.files[0]);
+  }
+};
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
-    const { name, value } = e.target;
-    setProductDetails((prevDetails) => ({
-      ...prevDetails,
-      [name]: value,
-    }));
-  };
+const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+  const { name, value } = e.target;
+  setProductDetails((prevDetails) => ({
+    ...prevDetails,
+    [name]: value,
+  }));
+};
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
-    e.preventDefault();
-    setLoading(true)
+const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+  e.preventDefault();
+  setLoading(true)
 
-    try {
-      // Call addNewProduct with the product details and image base64 data
-      const productId = await addNewProduct(productDetails, imageSrc || undefined);
-      setLoading(false)
-      console.log('Product added with ID:', productId);
-      // You can redirect or perform other actions upon successful product addition
-    } catch (error) {
-      setLoading(false)
-      console.error('Error adding product:', error);
-      // Handle the error appropriately, e.g., show an error message to the user
-    }
+  try {
+    // Call addNewProduct with the product details and image base64 data
+    const productId = await addNewProduct(productDetails, imageSrc || undefined);
+    setLoading(false)
+    console.log('Product added with ID:', productId);
+    // You can redirect or perform other actions upon successful product addition
+  } catch (error) {
+    setLoading(false)
+    console.error('Error adding product:', error);
+    // Handle the error appropriately, e.g., show an error message to the user
+  }
 
-  };
+};
 
   return (
     <div className="h-screen bg-gray-100 w-screen justify-center items-center flex flex-col">
@@ -174,6 +176,6 @@ const NewProduct: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
-export default NewProduct;
+export default NewProductForm;
