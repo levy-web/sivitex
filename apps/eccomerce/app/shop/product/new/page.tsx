@@ -8,13 +8,34 @@ interface ProductDetails {
   moreDetails: string;
 }
 
+const ImagePreview: React.FC<{ src: string }> = ({ src }) => (
+    <img src={src} alt="Image Preview" className={`w-80 h-60 ${src ? 'block' : 'hidden'}`}  />
+  );
+  
+
 const NewProduct: React.FC = () => {
-  const [productDetails, setProductDetails] = useState<ProductDetails>({
+    const [imageSrc, setImageSrc] = useState<string | null>(null);
+    const [productDetails, setProductDetails] = useState<ProductDetails>({
     productName: "",
     productPrice: "",
     productImage: "",
     moreDetails: "",
   });
+
+
+  const previewImage = (event: ChangeEvent<HTMLInputElement>) => {
+    const input = event.target;
+
+    if (input.files && input.files[0]) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        setImageSrc(e.target?.result as string);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     const { name, value } = e.target;
@@ -35,7 +56,7 @@ const NewProduct: React.FC = () => {
     <div className="h-screen w-screen justify-center items-center flex flex-col">
       <div className="container mx-auto justify-center items-center flex flex-col">
             <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Product Image */}
                     <div className="justify-center items-center flex flex-col">
                         <div className="mb-4 ">
@@ -43,15 +64,16 @@ const NewProduct: React.FC = () => {
                             Product Image
                         </label>
                         <input
+                            accept="image/*" 
+                            onChange={previewImage}
                             type="file"
                             id="productImage"
                             name="productImage"
-                            value={productDetails.productImage}
-                            onChange={handleChange}
                             className="mt-1 p-2 w-full border rounded-md"
                             required
                         />
                         </div>
+                        <ImagePreview src={imageSrc || ''} />
                     </div>
                     <div className="justify-center items-center flex flex-col">
 
