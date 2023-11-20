@@ -3,12 +3,7 @@ import { useState } from 'react';
 import { ProductComponent, ProductComponentProps } from '@eccomerce/card'
 import { NormalButton, NormalButtonProps } from '@eccomerce/buttons';
 /* eslint-disable-next-line */
-export interface Products {
-  id: number
-  imgSrc: string
-  price: number
-  prodectName: string
-} 
+import { Products } from '@eccomerce/product-interface';
 
 export interface ShopProps { }
 

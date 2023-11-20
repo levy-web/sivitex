@@ -1,14 +1,8 @@
 import Link from 'next/link'
+import { Products } from '@eccomerce/product-interface';
 /* eslint-disable-next-line */
 
-export interface ProductItem {
-  id:number
-  imgSrc: string
-  price: number
-  prodectName: string
-}
-
-export interface ProductComponentProps extends ProductItem {}
+export interface ProductComponentProps extends Products {}
 
 export const ProductComponent: React.FC<ProductComponentProps> = (props) => {
 

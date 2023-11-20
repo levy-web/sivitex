@@ -49,6 +49,12 @@
       "@eccomerce/hero-banner/server": ["libs/elements/banners/src/server.ts"],
       "@eccomerce/home": ["libs/features/pages/home/src/index.ts"],
       "@eccomerce/home/server": ["libs/features/pages/home/src/server.ts"],
+      "@eccomerce/product-interface": [
+        "libs/models/schema/ui/product/src/index.ts"
+      ],
+      "@eccomerce/product-interface/server": [
+        "libs/models/schema/ui/product/src/server.ts"
+      ],
       "@eccomerce/shop": ["libs/features/pages/shop/src/index.ts"],
       "@eccomerce/shop/server": ["libs/features/pages/shop/src/server.ts"],
       "@eccomerce/text-interface": ["libs/models/schema/ui/texts/src/index.ts"],

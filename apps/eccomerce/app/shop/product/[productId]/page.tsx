@@ -1,13 +1,14 @@
-import { ProductBanner } from "@eccomerce/hero-banner";
+import { CarouselBanner, ProductBanner } from "@eccomerce/hero-banner";
 
-const  ProductPage = ({ params }: { params: { productId: string } }) => {
+const  ProductPage = ({ params }: { params: { productId: number } }) => {
     const productIdentity = {
          params
     }
     return (
 
-        <div className="flex justify-center items-center h-screen bg-gray-100">
+        <div className="bg-gray-100">
             <ProductBanner {...productIdentity}/>
+            <CarouselBanner/>
         </div>
 
         )
