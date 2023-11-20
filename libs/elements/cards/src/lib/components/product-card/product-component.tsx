@@ -1,6 +1,8 @@
+import Link from 'next/link'
 /* eslint-disable-next-line */
 
 export interface ProductItem {
+  id:number
   imgSrc: string
   price: number
   prodectName: string
@@ -11,6 +13,7 @@ export interface ProductComponentProps extends ProductItem {}
 export const ProductComponent: React.FC<ProductComponentProps> = (props) => {
 
   const {
+    id,
     price,
     imgSrc,
     prodectName
@@ -24,7 +27,7 @@ export const ProductComponent: React.FC<ProductComponentProps> = (props) => {
       </div>
 
       <div className="cursor-pointer hover:text-pink-800 text-2xl">
-        <p>{prodectName}</p>
+        <Link href={`/shop/product/${id}`}><p>{prodectName}</p></Link>
       </div>
 
       <div>
