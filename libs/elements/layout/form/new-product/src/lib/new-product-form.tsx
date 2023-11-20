@@ -16,7 +16,7 @@ const ImagePreview: React.FC<{ src: string }> = ({ src }) => (
 /* eslint-disable-next-line */
 export interface NewProductFormProps {}
 
-export function NewProductForm(props: NewProductFormProps) {
+export const NewProductForm = (props: NewProductFormProps) => {
 
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false)
@@ -177,5 +177,3 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     </div>
   );
 }
-
-export default NewProductForm;
