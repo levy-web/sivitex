@@ -2,6 +2,7 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
 import { addNewProduct } from '@eccomerce/new-product'
+import { NormalButton, NormalButtonProps } from "@eccomerce/buttons";
 
 interface ProductDetails {
   productName: string;
@@ -26,6 +27,15 @@ export const NewProductForm = (props: NewProductFormProps) => {
   productCategory: "",
   moreDetails: "",
 });
+
+const buttonData:NormalButtonProps = {
+  text:  loading ? 'loading ...' : 'Add Product' ,
+  bgColor: 'bg-pink-800',
+  color: 'text-white',
+  hoverBgColor: 'hover:bg-gray-500',
+  hoverColor: 'hover:text-white',
+  buttonClick: ()=> {}
+}
 
 
 const previewImage = (event: ChangeEvent<HTMLInputElement>) => {
@@ -160,16 +170,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
                     </div>
 
                 </div>
-                {/* Submit Button */}
-                <div className="flex justify-end">
-                    <button
-                    disabled={loading}
-                    type="submit"
-                    className="bg-pink-800 text-white px-12 py-2 rounded-xl hover:bg-gray-800"
-                    >
-                    { loading ? 'loading ...' : 'Add Product' }
-                    </button>
-                </div>
+                <NormalButton {...buttonData}/>
                 </div>
             </div>
             </form>
