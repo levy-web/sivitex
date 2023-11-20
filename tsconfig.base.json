@@ -41,6 +41,8 @@
       "@eccomerce/contact/server": [
         "libs/features/pages/contact/src/server.ts"
       ],
+      "@eccomerce/firebase": ["libs/functions/firebase/src/index.ts"],
+      "@eccomerce/firebase/server": ["libs/functions/firebase/src/server.ts"],
       "@eccomerce/footer": ["libs/elements/layout/footer/src/index.ts"],
       "@eccomerce/footer/server": ["libs/elements/layout/footer/src/server.ts"],
       "@eccomerce/header": ["libs/elements/layout/header/src/index.ts"],
@@ -49,6 +51,10 @@
       "@eccomerce/hero-banner/server": ["libs/elements/banners/src/server.ts"],
       "@eccomerce/home": ["libs/features/pages/home/src/index.ts"],
       "@eccomerce/home/server": ["libs/features/pages/home/src/server.ts"],
+      "@eccomerce/new-product": ["libs/functions/new/new-product/src/index.ts"],
+      "@eccomerce/new-product/server": [
+        "libs/functions/new/new-product/src/server.ts"
+      ],
       "@eccomerce/product-interface": [
         "libs/models/schema/ui/product/src/index.ts"
       ],

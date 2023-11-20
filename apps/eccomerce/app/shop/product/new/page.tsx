@@ -1,10 +1,12 @@
 "use client"
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
+import { addNewProduct } from '@eccomerce/new-product'
+
 interface ProductDetails {
   productName: string;
-  productPrice: string;
-  productImage: string;
+  productPrice: number;
+  productCategory: string;
   moreDetails: string;
 }
 
@@ -17,8 +19,8 @@ const NewProduct: React.FC = () => {
     const [imageSrc, setImageSrc] = useState<string | null>(null);
     const [productDetails, setProductDetails] = useState<ProductDetails>({
     productName: "",
-    productPrice: "",
-    productImage: "",
+    productPrice: 0,
+    productCategory: "",
     moreDetails: "",
   });
 
@@ -45,11 +47,19 @@ const NewProduct: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
-    // Handle the form submission logic here
-    console.log('Product Details:', productDetails);
-    // You can send the data to an API or perform any other actions here
+
+    try {
+      // Call addNewProduct with the product details and image base64 data
+      const productId = await addNewProduct(productDetails, imageSrc || undefined);
+      console.log('Product added with ID:', productId);
+      // You can redirect or perform other actions upon successful product addition
+    } catch (error) {
+      console.error('Error adding product:', error);
+      // Handle the error appropriately, e.g., show an error message to the user
+    }
+
   };
 
   return (
@@ -97,14 +107,14 @@ const NewProduct: React.FC = () => {
 
                     {/* Product Category */}
                     <div className="mb-4">
-                    <label htmlFor="productName" className="block text-sm font-medium text-gray-600">
+                    <label htmlFor="productCategory" className="block text-sm font-medium text-gray-600">
                         Product Catgory
                         </label>
                         <input
                         type="text"
-                        id="productName"
-                        name="productName"
-                        value={productDetails.productName}
+                        id="productCategory"
+                        name="productCategory"
+                        value={productDetails.productCategory}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md"
                         required
@@ -118,7 +128,7 @@ const NewProduct: React.FC = () => {
                         Product Price
                         </label>
                         <input
-                        type="text"
+                        type="number"
                         id="productPrice"
                         name="productPrice"
                         value={productDetails.productPrice}
