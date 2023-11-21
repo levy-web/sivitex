@@ -41,6 +41,12 @@
       "@eccomerce/contact/server": [
         "libs/features/pages/contact/src/server.ts"
       ],
+      "@eccomerce/fetch-document": [
+        "libs/functions/fetch/fetch-one/src/index.ts"
+      ],
+      "@eccomerce/fetch-document/server": [
+        "libs/functions/fetch/fetch-one/src/server.ts"
+      ],
       "@eccomerce/fetch-products": [
         "libs/functions/fetch/fetch-products/src/index.ts"
       ],
