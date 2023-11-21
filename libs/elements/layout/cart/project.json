@@ -1,0 +1,16 @@
+{
+  "name": "cart-item",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/elements/layout/cart/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/elements/layout/cart/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}
