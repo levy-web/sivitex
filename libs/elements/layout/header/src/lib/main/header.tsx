@@ -59,10 +59,12 @@ export const Header = () => {
                     </li>
                 </ul>
             </div>
-            <div className='flex hidden md:flex'>
-                <img className='h-6 w-6 cursor-pointer' src='/shopping-cart.png' alt=''/>
-                <span className='text-xs'>0</span>
-            </div>
+            <Link href='/cart'>
+                <div className='flex hidden md:flex'>                
+                    <img className='h-6 w-6 cursor-pointer' src='/shopping-cart.png' alt=''/>
+                    <span className='text-xs'>0</span>                
+                </div>
+            </Link>
         </div>
     </nav>
 
