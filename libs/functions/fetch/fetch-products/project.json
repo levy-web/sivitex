@@ -1,0 +1,18 @@
+{
+  "name": "fetch-products",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/functions/fetch/fetch-products/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/functions/fetch/fetch-products/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}
