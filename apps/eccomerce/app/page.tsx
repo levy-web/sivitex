@@ -16,6 +16,6 @@ export default async function Index() {
    * Note: The corresponding styles are in the ./index.scss file.
    */
   
-  return <div>Redirecting...</div>;
+  return <div className='w-screen min-h-screen justify-center items-center flex'>Redirecting...</div>;
   
 }
