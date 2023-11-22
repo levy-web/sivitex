@@ -12,6 +12,8 @@ export const CartItem: React.FC<CartItemProps> = (props) => {
 
   } = props
 
+  console.log(id)
+
   return (
     <div className='container flex flex-row items-center justify-center w-full py-2 mb-4 rounded-xl'>
       <div className="w-100">

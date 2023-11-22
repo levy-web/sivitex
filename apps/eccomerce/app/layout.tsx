@@ -1,6 +1,7 @@
 import { Footer } from '@eccomerce/footer';
 import './global.css';
 import { Header } from "@eccomerce/header"
+import { ReduxProvider } from '../redux/provider';
 
 export const metadata = {
   title: 'sivitex',
@@ -20,7 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <nav><Header/></nav>
-        {children}
+
+        <ReduxProvider>
+          {children}
+        </ReduxProvider>
+                
         <Footer/>
       </body>
     </html>

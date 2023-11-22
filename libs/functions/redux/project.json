@@ -1,0 +1,16 @@
+{
+  "name": "slice",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/functions/redux/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/functions/redux/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}
