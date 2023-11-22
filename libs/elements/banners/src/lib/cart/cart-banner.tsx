@@ -1,14 +1,11 @@
+'use client'
 import { CartItem, CartItemProps } from "@eccomerce/cart-item";
+import { useAppSelector } from "@eccomerce/slice";
 /* eslint-disable-next-line */
 export interface CartBannerProps {}
 
 export function CartBanner(props: CartBannerProps) {
-  const CartData: CartItemProps[] = [
-
-    { id:"one", imgSrc:"/model2.png", prodectName:"chilli chicken", price: 5667 },
-    {id:"one", imgSrc:"/model2.png", prodectName:"chilli chicken", price: 5667},
-
-  ]
+  const CartData: CartItemProps[] = useAppSelector((state) => state.cartReducer.value.products)
 
   const CartItems = CartData.map((prod)=><CartItem {...prod}/>)
 

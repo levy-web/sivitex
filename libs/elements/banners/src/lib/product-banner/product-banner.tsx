@@ -1,7 +1,12 @@
 "use client"
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Products } from '@eccomerce/product-interface';
 import { fetchDocument } from '@eccomerce/fetch-document';
+import { addToCart } from "@eccomerce/slice"
+import { AppDispatch } from '@eccomerce/slice'
+
+
 
 /* eslint-disable-next-line */
 export interface ProductBannerProps {  params: { productId:string }}
@@ -12,6 +17,7 @@ export const ProductBanner = (props: ProductBannerProps) =>  {
   } = props;
 
   const [data, setData] = useState<Products | null>(null);
+  const dispatch = useDispatch<AppDispatch>()
 
   useEffect(()=>{
 
@@ -47,7 +53,7 @@ export const ProductBanner = (props: ProductBannerProps) =>  {
           <p>{data?.prodectName}</p>
           <p>{data?.price}</p>
 
-          <div className='w-full bg-blue-800 text-white py-4 rounded-xl text-center cursor-pointer'>+ add to cart</div>
+          <div onClick={()=> dispatch(addToCart( data ?? {price:0, imgSrc:'', prodectName:'', id:''} ))} className='w-full bg-blue-800 text-white py-4 rounded-xl text-center cursor-pointer'>+ add to cart</div>
         </div>
 
       </div>

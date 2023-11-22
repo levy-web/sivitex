@@ -1,6 +1,7 @@
+import { useDispatch } from "react-redux";
 /* eslint-disable-next-line */
 import { Products } from "@eccomerce/product-interface";
-
+import { AppDispatch, removeFromCart } from "@eccomerce/slice"
 export interface CartItemProps extends Products {}
 
 export const CartItem: React.FC<CartItemProps> = (props) => {
@@ -12,7 +13,8 @@ export const CartItem: React.FC<CartItemProps> = (props) => {
 
   } = props
 
-  console.log(id)
+  const dispatch = useDispatch<AppDispatch>()
+
 
   return (
     <div className='container flex flex-row items-center justify-center w-full py-2 mb-4 rounded-xl'>
@@ -26,7 +28,7 @@ export const CartItem: React.FC<CartItemProps> = (props) => {
         <p>$ {price}</p>
       </div>
       <div className="w-100 px-4">
-        <button className="text-red-600">delete</button>
+        <button onClick={()=> dispatch(removeFromCart(id))} className="text-red-600">delete</button>
       </div>
       <hr className="text-white bg-white"/> 
     </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { store } from './Store';
+import { store } from '@eccomerce/slice';
 import { Provider } from 'react-redux';
 
 export function ReduxProvider({children}: {children: React.ReactNode}){
