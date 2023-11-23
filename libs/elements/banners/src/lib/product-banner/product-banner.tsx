@@ -43,7 +43,7 @@ export const ProductBanner = (props: ProductBannerProps) =>  {
   })
   
   return (
-    <div className='flex justify-center items-center h-screen w-screen'>
+    <div className='flex justify-center items-center h-screen'>
     <div className='container mx-auto'>
       <div className='grid grid-cols-1 md:grid-cols-2 px-4 md:px-8 gap-4'>
         <div className='h-full w-full justify-center items-center flex flex-col'>
