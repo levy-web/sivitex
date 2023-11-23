@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useState } from 'react';
 import { usePathname } from 'next/navigation'
+import { useAppSelector } from '@eccomerce/slice';
 /* eslint-disable-next-line */
 export interface HeaderProps {}
 
@@ -9,6 +10,9 @@ export const Header = () => {
     const [menu, setMenu] = useState<boolean>(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname()
+
+    const CartData = useAppSelector((state) => state.cartReducer.value.products)
+
 
     const toggleMenu = () => {
         setMenu(!menu)
@@ -62,7 +66,7 @@ export const Header = () => {
             <Link href='/cart'>
                 <div className='flex hidden md:flex'>                
                     <img className='h-6 w-6 cursor-pointer' src='/shopping-cart.png' alt=''/>
-                    <span className='text-xs'>0</span>                
+                    <span className='text-xs bg-pink-800 rounded-full text-white w-4 h-4 text-center '>{CartData.length}</span>                
                 </div>
             </Link>
         </div>

@@ -1,12 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Products } from "@eccomerce/product-interface";
 
+interface CartProducts extends Products {
+  quantity:number
+
+}
+
 type InitialState = {
   value: CartState
 }
 
 type CartState = {
-  products:Products[]
+  products:CartProducts[]
 }
 
 const initialState = {
@@ -23,14 +28,26 @@ export const cart = createSlice({
       return initialState;
     }, 
 
-    addToCart: (state=initialState, action:PayloadAction<Products>) => {
-      return {
-        value: {
-          products: [...state.value.products, action.payload]
-  
-        }
-      }
+    addToCart: (state = initialState, action: PayloadAction<CartProducts>) => {
+      // Check if product already in cart
+      const exist = state.value.products.find((x) => x.id === action.payload.id);
 
+      if (exist) {
+        // Increase the quantity
+        return {
+          value: {
+            products: state.value.products.map((x) =>
+              x.id === action.payload.id ? { ...x, quantity: x.quantity + 1 } : x
+            ),
+          },
+        };
+      } else {
+        return {
+          value: {
+            products: [...state.value.products, { ...action.payload, quantity: 1 }],
+          },
+        };
+      }
     },
 
     removeFromCart: (state=initialState, action:PayloadAction<string>)=> {
