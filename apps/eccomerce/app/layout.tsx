@@ -20,13 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav><Header/></nav>
-
-        <ReduxProvider>
+      <ReduxProvider>
+        <nav><Header/></nav>        
           {children}
-        </ReduxProvider>
-                
-        <Footer/>
+          <Footer/>
+        </ReduxProvider>                     
       </body>
     </html>
   );
