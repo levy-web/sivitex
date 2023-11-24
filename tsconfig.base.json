@@ -83,6 +83,10 @@
       "@eccomerce/new-product/server": [
         "libs/functions/new/new-product/src/server.ts"
       ],
+      "@eccomerce/pay-checkout": ["libs/elements/layout/pay/src/index.ts"],
+      "@eccomerce/pay-checkout/server": [
+        "libs/elements/layout/pay/src/server.ts"
+      ],
       "@eccomerce/product-interface": [
         "libs/models/schema/ui/product/src/index.ts"
       ],

@@ -1,3 +1,4 @@
+export * from './lib/pay-banner/pay-banner';
 export * from './lib/cart/cart-banner';
 export * from './lib/product-banner/product-banner';
 export * from './lib/carousel-banner/carousel-banner';
