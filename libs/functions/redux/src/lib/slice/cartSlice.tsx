@@ -2,8 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Products } from "@eccomerce/product-interface";
 
 interface CartProducts extends Products {
-  quantity:number
-
+  quantity?:number
 }
 
 type InitialState = {

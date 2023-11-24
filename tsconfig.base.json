@@ -41,6 +41,12 @@
       "@eccomerce/category-card/server": [
         "libs/models/schema/ui/cards/src/server.ts"
       ],
+      "@eccomerce/checkout": [
+        "libs/elements/layout/form/checkout/src/index.ts"
+      ],
+      "@eccomerce/checkout/server": [
+        "libs/elements/layout/form/checkout/src/server.ts"
+      ],
       "@eccomerce/contact": ["libs/features/pages/contact/src/index.ts"],
       "@eccomerce/contact/server": [
         "libs/features/pages/contact/src/server.ts"
