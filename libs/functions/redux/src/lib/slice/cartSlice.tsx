@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { CartState, Checkout, CartProducts } from '@eccomerce/cart-interface'
+import { Products } from "@eccomerce/product-interface";
 
 
 type InitialState = {
@@ -30,7 +31,7 @@ export const cart = createSlice({
       return initialState;
     }, 
 
-    addToCart: (state = initialState, action: PayloadAction<CartProducts>) => {
+    addToCart: (state = initialState, action: PayloadAction<CartProducts | Products>) => {
       // Check if product already in cart
       const exist = state.value.products.find((x) => x.id === action.payload.id);
 
