@@ -53,7 +53,7 @@ export const Header = () => {
                         <Link href="/shop" className={`py-2 px-3 rounded ${pathname === '/shop' ? 'text-white bg-pink-800' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-800 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Shop</Link>
                     </li>
                     <li onClick={toggleMenu} className='py-2 px-3'>
-                        <Link href="/categories" className={`py-2 px-3 rounded ${pathname === '/categories' ? 'text-white bg-pink-800' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-800 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Categories</Link>{menu ? <span className='' >▲</span> : <span className='' >▼</span>}
+                        <Link href="/" className={`py-2 px-3 rounded ${pathname === '/categories' ? 'text-white bg-pink-800' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-800 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Categories</Link>{menu ? <span className='' >▲</span> : <span className='' >▼</span>}
                     </li>
                     <li className='py-2 px-3'>
                         <Link href="/contact" className={`py-2 px-3 rounded ${pathname === '/contact' ? 'text-white bg-pink-800' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-800 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}>Contact</Link>
