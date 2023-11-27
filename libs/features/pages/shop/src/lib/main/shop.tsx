@@ -11,15 +11,19 @@ export interface ShopProps { }
 export function Shop(props: ShopProps) {
 
   const [visibleProducts, setVisibleProducts] = useState(12);
+  const [loading, setLoading] = useState<boolean>(false);
   const [products, setProducts] = useState<Products[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true)
       try {
         const fetchedProducts = await fetchProducts();
         setProducts(fetchedProducts);
+        setLoading(false)
       } catch (error) {
         // Handle error, e.g., show an error message to the user
+        setLoading(false)
         console.error('Error fetching products:', error);
       }
     };
@@ -58,9 +62,9 @@ export function Shop(props: ShopProps) {
 
   return (
     <div className='bg-gray-100 min-h-screen py-12 flex flex-col justify-center items-center'>
-    {products.length > 0 ? (<div className='container mx-auto mb-8 pt-20 md:pt-24 grid grid-cols-1 md:grid-cols-3 md:gap-4'>
+    {!loading ? (<div className='container mx-auto mb-8 pt-20 md:pt-24 grid grid-cols-1 md:grid-cols-3 md:gap-4'>
       { productsJsx }
-    </div>) : (<div><p>no products</p></div>)}
+    </div>) : (<div><p>loading ...</p></div>)}
     {visibleProducts < products.length && (
         <NormalButton  {...buttonData}/>
       )}
