@@ -33,6 +33,10 @@
       "@eccomerce/carousel/server": [
         "libs/elements/layout/carousel/src/server.ts"
       ],
+      "@eccomerce/cart-interface": ["libs/models/schema/ui/cart/src/index.ts"],
+      "@eccomerce/cart-interface/server": [
+        "libs/models/schema/ui/cart/src/server.ts"
+      ],
       "@eccomerce/cart-item": ["libs/elements/layout/cart/src/index.ts"],
       "@eccomerce/cart-item/server": [
         "libs/elements/layout/cart/src/server.ts"

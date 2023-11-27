@@ -1,21 +1,24 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Products } from "@eccomerce/product-interface";
+import { CartState, Checkout, CartProducts } from '@eccomerce/cart-interface'
 
-interface CartProducts extends Products {
-  quantity?:number
-}
 
 type InitialState = {
   value: CartState
 }
 
-type CartState = {
-  products:CartProducts[]
-}
 
 const initialState = {
   value: {
-    products: []
+    products: [],
+    checkout:{
+      products:[],
+      phone:0,
+      email:"",
+      town:"",
+      deliveryMeans:"",
+      idNumber:0
+    }
+
   } as CartState
 } as InitialState
 
@@ -35,6 +38,7 @@ export const cart = createSlice({
         // Increase the quantity
         return {
           value: {
+            ...state.value,
             products: state.value.products.map((x) =>
               x.id === action.payload.id ? { ...x, quantity: x.quantity + 1 } : x
             ),
@@ -43,6 +47,7 @@ export const cart = createSlice({
       } else {
         return {
           value: {
+            ...state.value,
             products: [...state.value.products, { ...action.payload, quantity: 1 }],
           },
         };
@@ -52,7 +57,17 @@ export const cart = createSlice({
     removeFromCart: (state=initialState, action:PayloadAction<string>)=> {
       return {
         value: {
+          ...state.value,
           products: state.value.products.filter((prod)=> prod.id != action.payload)
+        }
+      }
+
+    },
+    checkoutPay: (state=initialState, action:PayloadAction<Checkout>) => {
+      return {
+        value: {
+          ...state.value,
+          checkout: action.payload
         }
       }
 
@@ -63,4 +78,4 @@ export const cart = createSlice({
 
 export const cartReducer = cart.reducer 
 
-export const { clearCart, addToCart, removeFromCart } = cart.actions
+export const { clearCart, addToCart, removeFromCart, checkoutPay } = cart.actions
