@@ -40,10 +40,12 @@ export const Header = () => {
                 <img src="sivitex.png" className="h-20 hidden md:block" alt="sivitex Logo" />
                 <span className="self-center text-2xl text-pink-800 font-semibold whitespace-nowrap dark:text-white">Sivitex</span>
             </Link>
-            <div className='flex md:hidden'>
-                <img className='h-6 w-6 cursor-pointer' src='/shopping-cart.png' alt=''/>
-                <span className='text-xs'>0</span>
-            </div>
+            <Link href='/cart'>
+                <div className='flex md:hidden'>
+                    <img className='h-6 w-6 cursor-pointer' src='/shopping-cart.png' alt=''/>
+                    <span className='text-xs bg-pink-800 rounded-full text-white w-4 h-4 text-center'>{CartData.length}</span>
+                </div>
+            </Link>
             <div className={`mx-auto w-full md:block md:w-auto ${menuOpen ? 'text-center' : 'hidden'}`} id="navbar-multi-level">
                 <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-opacity-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li className='py-2 px-3'>
