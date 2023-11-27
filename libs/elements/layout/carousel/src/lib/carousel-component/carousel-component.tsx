@@ -1,15 +1,10 @@
 'use client'
 
 import { useState } from "react";
-
-export interface carouselObjects {
-  imgSrc: string
-  price: number
-  name: string
-}
+import { Products } from "@eccomerce/product-interface";
 
 /* eslint-disable-next-line */
-export interface CarouselComponentProps {images:carouselObjects[], itemsPerPage:number, phoneItemsPerPage:number}
+export interface CarouselComponentProps {images:Products[], itemsPerPage:number, phoneItemsPerPage:number}
 
 export const CarouselComponent: React.FC<CarouselComponentProps> = (props) => {
 
@@ -57,9 +52,9 @@ export const CarouselComponent: React.FC<CarouselComponentProps> = (props) => {
             .slice(startIndex, startIndex + phoneItemsPerPage)
             .map((image, index) => (
               <div key={index} className="carousel-item bg-gray-50">
-                <img src={image.imgSrc} alt={image.name} className="w-full h-96"/>
-                <p className="text-center">{image.name}</p>
-                <p className="text-center">${image.price}</p>
+                <img src={image.imgSrc} alt={image.prodectName} className="w-full h-96"/>
+                <p className="text-center">{image.prodectName}</p>
+                <p className="text-center">ksh {image.price}</p>
               </div>
           ))}
         </div>
@@ -80,8 +75,8 @@ export const CarouselComponent: React.FC<CarouselComponentProps> = (props) => {
           .slice(startIndex, startIndex + itemsPerPage)
           .map((image, index) => (
             <div key={index} className="carousel-item bg-gray-50 rounded-2xl mx-4 w-full">
-              <img src={image.imgSrc} alt={image.name} className="w-80 h-60" />
-              <p className="text-center">{image.name}</p>
+              <img src={image.imgSrc} alt={image.prodectName} className="w-80 h-60" />
+              <p className="text-center">{image.prodectName}</p>
               <p className="text-center">${image.price}</p>
             </div>
         ))}
