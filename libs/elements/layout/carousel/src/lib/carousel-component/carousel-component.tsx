@@ -77,8 +77,8 @@ export const CarouselComponent: React.FC<CarouselComponentProps> = (props) => {
           .map((image, index) => (
             <div key={index} className="carousel-item bg-gray-50 rounded-2xl mx-4 w-full">
               <img src={image.imgSrc} alt={image.prodectName} className="w-80 h-60" />
-              <p className="text-center">{image.prodectName}</p>
-              <p className="text-center">${image.price}</p>
+              <Link href={`shop/product/${image.id}`}><p className="text-center cursor-pointer hover:text-pink-800">{image.prodectName}</p></Link>
+              <p className="text-center">ksh {image.price}</p>
             </div>
         ))}
       </div>
