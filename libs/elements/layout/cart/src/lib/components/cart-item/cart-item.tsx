@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 /* eslint-disable-next-line */
 import { Products } from "@eccomerce/product-interface";
 import { AppDispatch, removeFromCart } from "@eccomerce/slice"
-export interface CartItemProps extends Products {quantity?:number}
+export interface CartItemProps extends Products {quantity:number}
 
 export const CartItem: React.FC<CartItemProps> = (props) => {
   const {
