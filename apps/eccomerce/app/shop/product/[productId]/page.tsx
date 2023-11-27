@@ -1,6 +1,6 @@
 import { CarouselBanner, ProductBanner } from "@eccomerce/hero-banner";
 
-const  ProductPage = ({ params }: { params: { productId: number } }) => {
+const  ProductPage = ({ params }: { params: { productId: string } }) => {
     const productIdentity = {
          params
     }
