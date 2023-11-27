@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Products } from "@eccomerce/product-interface";
+import Link from "next/link";
 
 /* eslint-disable-next-line */
 export interface CarouselComponentProps {images:Products[], itemsPerPage:number, phoneItemsPerPage:number}
@@ -53,7 +54,7 @@ export const CarouselComponent: React.FC<CarouselComponentProps> = (props) => {
             .map((image, index) => (
               <div key={index} className="carousel-item bg-gray-50">
                 <img src={image.imgSrc} alt={image.prodectName} className="w-full h-96"/>
-                <p className="text-center">{image.prodectName}</p>
+                <Link href={`shop/product/${image.id}`}><p className="text-center cursor-pointer hover:text-pink-800">{image.prodectName}</p></Link>
                 <p className="text-center">ksh {image.price}</p>
               </div>
           ))}
