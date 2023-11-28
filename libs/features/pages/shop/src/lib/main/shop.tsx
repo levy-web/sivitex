@@ -61,10 +61,10 @@ export function Shop(props: ShopProps) {
 
 
   return (
-    <div className='bg-gray-100 min-h-screen py-12 flex flex-col justify-center items-center'>
-    {!loading ? (<div className='container mx-auto mb-8 pt-20 md:pt-24 grid grid-cols-1 md:grid-cols-3 md:gap-4'>
-      { productsJsx }
-    </div>) : (<div><p>loading ...</p></div>)}
+    <div className='flex flex-col justify-center items-center'>
+      {!loading ? (<div className='container mx-auto mb-8 pt-4 md:pt-4 grid grid-cols-2 gap-1 md:grid-cols-3 md:gap-4'>
+        { productsJsx }
+      </div>) : (<div><p>loading ...</p></div>)}
     {visibleProducts < products.length && (
         <NormalButton  {...buttonData}/>
       )}

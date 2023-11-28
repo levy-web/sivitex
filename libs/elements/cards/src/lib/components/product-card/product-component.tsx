@@ -15,12 +15,12 @@ export const ProductComponent: React.FC<ProductComponentProps> = (props) => {
   } = props;
 
   return (
-    <div className='container flex flex-col items-center justify-center'>
-      <div className="h-72 w-full justify-center flex items-center">
+    <div className='container bg-gray-50 w-full shadow-inner flex flex-col items-center justify-center'>
+      <div className="h-62 md:h-72 w-full justify-center flex items-center">
         <img src={imgSrc} alt="" className="w-72 h-48  rounded-lg"/>
       </div>
 
-      <div className="cursor-pointer hover:text-pink-800 text-2xl">
+      <div className="cursor-pointer hover:text-pink-800 text-xs">
         <Link href={`/shop/product/${id}`}><p>{prodectName}</p></Link>
       </div>
 
