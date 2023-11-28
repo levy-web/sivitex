@@ -34,7 +34,7 @@ export function CartBanner(props: CartBannerProps) {
       {CartData.length > 0 && (<p className="mb-2 text-gray-600 text-lg text-center">We will contact you when your order is on the way.</p>)} */}
       <div className="container pt-4 mx-auto flex flex-col md:flex-row w-full">
       { CartData.length > 0 ? 
-        (<div className="w-full md:w-2/3 min-h-80 md:mx-8 px-2">
+        (<div className="w-full md:w-2/3 min-h-80 md:mx-8 px-4 md:px-2">
           <h2 className="py-2 px-2 w-full bg-light">Cart Items</h2>
            {CartItems} 
         </div>) 
